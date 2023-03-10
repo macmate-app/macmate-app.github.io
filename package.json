@@ -1,6 +1,9 @@
 {
   "license": "UNLICENSED",
+  "version": "0.1.0",
   "scripts": {
+    "test": "ts-node src/index.ts",
+    "gather": "ts-node gather.ts",
     "build": "maml build -i maml -o docs",
     "serve": "http-server docs -p 0 -o -c-1"
   },
@@ -9,9 +12,18 @@
   },
   "devDependencies": {
     "@types/node": "^18.15.0",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "eslint": "^8.35.0",
+    "eslint-config-alloy": "^4.9.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "http-server": "^14.1.1",
     "maml": "^0.8.4",
+    "prettier": "^2.8.4",
+    "shell-commands": "^0.1.2",
     "ts-node": "^10.9.1",
+    "ttpt": "^0.1.9",
     "typescript": "^4.9.5",
     "yarn-upgrade-all": "^0.7.2"
   }

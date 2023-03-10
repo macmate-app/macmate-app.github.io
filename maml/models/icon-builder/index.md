@@ -10,30 +10,44 @@ Introducing Icon Builder, the ultimate macOS app for creating stunning icons. Wi
     <li data-target="#main-carousel" data-slide-to="1"></li>
     <li data-target="#main-carousel" data-slide-to="2"></li>
     <li data-target="#main-carousel" data-slide-to="3"></li>
+    <li data-target="#main-carousel" data-slide-to="4"></li>
+    <li data-target="#main-carousel" data-slide-to="5"></li>
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img src="/img/icon-builder/0.png"/>
       <div class="carousel-caption">
-        <h3>Puppy Icon</h3>
+        <h3>Horse</h3>
       </div>
     </div>
     <div class="item">
       <img src="/img/icon-builder/1.png"/>
       <div class="carousel-caption">
-        <h3>Girl Icon</h3>
+        <h3>Puppy</h3>
       </div>
     </div>
     <div class="item">
       <img src="/img/icon-builder/2.png"/>
       <div class="carousel-caption">
-        <h3>8-ball Icon</h3>
+        <h3>Girl</h3>
       </div>
     </div>
     <div class="item">
       <img src="/img/icon-builder/3.png"/>
       <div class="carousel-caption">
-        <h3>Bear Icon</h3>
+        <h3>Beer</h3>
+      </div>
+    </div>
+    <div class="item">
+      <img src="/img/icon-builder/4.png"/>
+      <div class="carousel-caption">
+        <h3>8-ball</h3>
+      </div>
+    </div>
+    <div class="item">
+      <img src="/img/icon-builder/5.png"/>
+      <div class="carousel-caption">
+        <h3>Settings</h3>
       </div>
     </div>
   </div>

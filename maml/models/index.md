@@ -22,5 +22,3 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-<!-- todo: here list all the apps, responsive grid -->
