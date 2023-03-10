@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Maximize your productivity and creativity | MacMate.app</title>
+  <title>{{ page.title }}{{ page.title_suffix }}</title>
   <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">
@@ -20,51 +20,22 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">MacMate.app</a>
+        <a class="navbar-brand" href="/">{{ page.brand }}</a>
       </div>
       <div class="collapse navbar-collapse" id="navbar-items">
         <ul class="nav navbar-nav">
-          <li><a href="/icon-builder/">Icon Builder</a></li>
+          {% for navbar_item in page.navbar_items -%}
+            {% if page.pathname.startsWith(navbar_item) -%}
+              <li class="active"><a href="{{ navbar_item }}">{{ pages[navbar_item].name }}</a></li>
+            {%- else -%}
+              <li><a href="{{ navbar_item }}">{{ pages[navbar_item].name }}</a></li>
+            {%- endif %}
+          {%- endfor %}
         </ul>
       </div>
     </div>
   </nav>
-  <div class="jumbotron">
-  <div class="container sm-container">
-    <h1>The smart way to find and install great macOS apps</h1>
-    <p>
-      Welcome to MacMate.app. Discover and download high-quality productivity, utility, creativity, and developer tools for your Mac, all in one place.
-    </p>
-  </div>
-</div>
-<div class="container">
-  <div id="main-carousel" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
-  </ol>
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <a href="/icon-builder/">
-        <img src="/img/icon-builder/0.png"/>
-        <div class="carousel-caption">
-          <h4>Icon Builder</h4>
-          <h6>Compose icons easily</h6>
-        </div>
-      </a>
-    </div>
-  </div>
-  <a class="left carousel-control" href="#main-carousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#main-carousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-<!-- todo: here list all the apps, responsive grid -->
-
-</div>
+  {% block main %}{% endblock %}
   <footer class="footer">
     <div class="container">
       <p class="text-muted">
