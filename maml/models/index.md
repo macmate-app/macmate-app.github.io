@@ -8,7 +8,7 @@
         <img src="/img/icon-builder/0.png"/>
         <div class="carousel-caption">
           <h4>Icon Builder</h4>
-          <h6>Compose icons easily</h6>
+          <h6>Design stunning icons with ease</h6>
         </div>
       </a>
     </div>

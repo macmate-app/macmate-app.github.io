@@ -2,20 +2,7 @@
 
 <img src="/img/icon-builder/icon.png" width="128" align="left" style="margin-right: 32px;"/>
 
-Icon Builder, compose icons easily. There are patterns in icons: 
-For background, most of them use a symmetrical shape like square or circle.
-For foreground, most of them use some icons or characters.
-This app allows you to compose icons easily by taking advantages of patterns mentioned above.
-
-
-### Download:
-
-<img src="/img/macappstore.png"/>
-
-Stay tuned, we are going to be listed in Mac App Store!
-
-
-## Screenshots
+Introducing Icon Builder, the ultimate macOS app for creating stunning icons. With our app, you can easily build icons using a set of elements, including squares, circles, texts, emojis, and icons, and customize their size and color to create a unique and personalized icon for your project. Whether you're creating icons for your website, presentations, or personal projects, Icon Builder makes it easy to design eye-catching icons that reflect your style and personality. Download Icon Builder today and start creating beautiful icons in minutes!
 
 <div id="main-carousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -60,18 +47,17 @@ Stay tuned, we are going to be listed in Mac App Store!
   </a>
 </div>
 
-
 ## Features
 
-- Square
-- Circle
-- Emoji
-- Font Awesome Icons
-- Text with customized size, fonts and colors
-- Save as SVG
-- Save as PNG
+- Create icons easily using a set of elements, including squares, circles, texts, emojis, and icons
+- Customize the size and color of each element to build the perfect icon
+- Export icons to SVG and PNG formats for use in various projects
+- Save and manage your icon designs for future use
+- User-friendly interface with intuitive controls for easy icon creation
+- Regular updates and improvements to enhance your icon-building experience
 
+## Download:
 
-## Questions & Support
+<img src="/img/macappstore.png"/>
 
-Please contact [Customer Support](/contact/).
+Stay tuned, it's going to be listed in the Mac App Store soon.
