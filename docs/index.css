@@ -38,3 +38,7 @@ body {
 .footer > .container {
   padding: 0 16px;
 }
+
+.footer-link {
+  margin: 0 1rem;
+}

@@ -1,13 +1,11 @@
-## Customer Support
+# Customer Support
 
-We value our customers' feedback and are committed to providing excellent support for our users. If you encounter any issues, have a feature request, or would like to ask a question, please don't hesitate to reach out to us. You can contact our customer support team by sending an email to macmate.app@gmail.com. We will do our best to respond promptly and address any concerns you may have. Thank you for your continued support.
+At MacMate.app, we are committed to providing our customers with the best support possible. If you need assistance with any of our macOS apps, please don't hesitate to contact us.
 
-In order for us to quickly and effectively resolve any issues or bugs you may encounter, please include the following information in your email:
+## Contacting Support
 
-- The name and version number of the app in question.
-- The version of MacOS you are running, as well as your computer model.
-- Clear and detailed steps to reproduce the issue or bug you are experiencing.
-- A screenshot of the issue, if possible.
-- Any additional information that may be relevant to troubleshooting the issue.
+The best way to reach our support team is by sending an email to [support@macmate.app](mailto:support@macmate.app). One of our friendly support agents will respond to your inquiry as soon as possible.
 
-By including this information in your email, you can help us provide you with the best possible support and resolve any issues you may be experiencing in a timely and efficient manner.
+Please include as much detail as possible about the issue you are experiencing, including the name of the app you are using, your operating system version, and any error messages you may have received. This will help us to better diagnose and resolve your issue.
+
+![support](/img/support.jpg)
