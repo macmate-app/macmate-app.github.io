@@ -42,3 +42,8 @@ body {
 .footer-link {
   margin: 0 1rem;
 }
+
+video {
+  display: block;
+  margin: 0 auto;
+}

@@ -4,5 +4,5 @@ view: home
 
 brand: MacMate.app
 title: Maximize your productivity and creativity
-title_suffix: " | MacMate.app"
-navbar_items: [ "/icon-builder/" ]
+title_suffix: ' | MacMate.app'
+navbar_items: ['/icon-builder/']

@@ -14,7 +14,7 @@ git config core.sshCommand 'ssh -i ~/.ssh/id_rsa2'
 git config credential.helper ""
 ```
 
-### 方法2
+### 方法 2
 
 貌似也可以全局更改：
 
@@ -24,9 +24,9 @@ git push
 ssh-add -d ~/.ssh/id_rsa_second
 ```
 
-就是先把key添加到 ssh agent, 然后这个是全局的修改。
+就是先把 key 添加到 ssh agent, 然后这个是全局的修改。
 等 push 完之后再把 key 从 ssh agent 删掉。
-查看ssh agent的key的方式：
+查看 ssh agent 的 key 的方式：
 
 ```
 ssh-add -L

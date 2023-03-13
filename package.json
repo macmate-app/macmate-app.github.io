@@ -2,6 +2,7 @@
   "license": "UNLICENSED",
   "version": "0.1.0",
   "scripts": {
+    "lint": "eslint --fix '**/*.{ts,tsx}' && prettier --write .",
     "gather": "ts-node gather.ts",
     "build": "maml build -i maml -o docs",
     "serve": "http-server docs -p 0 -o -c-1"

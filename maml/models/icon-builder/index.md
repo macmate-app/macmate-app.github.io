@@ -75,3 +75,13 @@ Introducing Icon Builder, the ultimate macOS app for creating stunning icons. Wi
 <img src="/img/macappstore.png"/>
 
 Stay tuned, it's going to be listed in the Mac App Store soon.
+
+## Video tutorial
+
+Introducing our latest video tutorial, where we guide you step by step on how to create a stunning icon from scratch. Whether you are a beginner or an experienced designer, this video will show you how to create an eye-catching icon that will make your app stand out from the rest. So sit back, relax, and follow along with our expert guide as we take you on a journey to create your very own stunning icon!
+
+<video controls width="948" height="593">
+  <source src="/video/icon-builder/final.mp4" type="video/mp4">
+  <source src="/video/icon-builder/original.mp4" type="video/webm">
+  Your browser does not support HTML5 video.
+</video>

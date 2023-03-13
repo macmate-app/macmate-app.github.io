@@ -12,6 +12,10 @@ const main = async () => {
     await run(`cp ${iconPath} ./maml/assets/img/icon-builder/`);
     i += 1;
   }
+  await run(`
+    cp ../icon-builder/test/videos/final.mp4 ./maml/assets/video/icon-builder/
+    cp ../icon-builder/test/videos/original.webm ./maml/assets/video/icon-builder/
+  `);
 };
 
 main();
