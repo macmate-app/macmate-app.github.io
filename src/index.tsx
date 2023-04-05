@@ -1,9 +1,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-import App from './app';
+import PageTitle from './page-title';
+import store from './store';
 
-const container = document.createElement('div');
-document.body.appendChild(container);
-const root = createRoot(container);
-root.render(<App />);
+const titleElement = document.querySelector('title')!;
+const titleRoot = createRoot(titleElement);
+titleRoot.render(<PageTitle store={store} />);
