@@ -1,7 +1,9 @@
 import { manage } from 'manate';
 
+import { paths } from './constants';
+
 export class Store {
-  public path = '/';
+  public path: (typeof paths)[number] = '/';
   public get title() {
     const siteName = 'MacMate.app';
     switch (this.path) {
