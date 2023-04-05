@@ -11,6 +11,9 @@ const NavBar = (props: { store: Store }) => {
         <li className={store.path === '/icon-builder-plus/' ? 'active' : undefined}>
           <a href="/icon-builder-plus/">Icon Builder Plus</a>
         </li>
+        <li className={store.path === '/typescript-playground/' ? 'active' : undefined}>
+          <a href="/typescript-playground/">TypeScript Playground</a>
+        </li>
       </ul>
     );
   };
