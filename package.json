@@ -6,8 +6,8 @@
   "scripts": {
     "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
     "serve": "rm -rf .parcel-cache dist && parcel src/index.html",
-    "test": "playwright test",
-    "serve:prod": "http-server -p 3000 docs"
+    "serve:prod": "http-server -p 1234 docs -c-1",
+    "test": "playwright test"
   },
   "devDependencies": {
     "@playwright/test": "^1.32.2",

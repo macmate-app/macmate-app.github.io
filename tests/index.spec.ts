@@ -4,10 +4,18 @@ import { join } from 'path';
 import { run } from 'shell-commands';
 
 test.beforeAll(async () => {
-  await run('rm -rf saved');
+  await run(`
+    rm -rf docs
+    yarn parcel build src/index.html --dist-dir docs
+  `);
+  run('timeout 5s yarn http-server -p 1234 docs -c-1'); // auto quit after 5s
 });
 test.afterAll(async () => {
-  await run('yarn lint');
+  await run(`
+    yarn lint
+    cp -r saved/* docs/
+    rm -rf saved
+  `);
 });
 
 const saveFile = (_content: string, ...paths: string[]) => {
@@ -16,7 +24,7 @@ const saveFile = (_content: string, ...paths: string[]) => {
     mkdirSync(folderPath, { recursive: true });
   }
   let content = _content;
-  content = content.replace(/<script src="\/index\.[a-z0-9]+?\.js" defer=""><\/script>/, '');
+  content = content.replace(/<script type="module" src="\/index\.[a-z0-9]+?\.js"><\/script>/, '');
   content = content.replace(/<html __playwright_target__="call@.+?">/, '<html>');
   writeFileSync(join(folderPath, 'index.html'), content);
 };
