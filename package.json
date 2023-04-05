@@ -5,7 +5,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
-    "serve": "parcel src/index.html --dist-dir docs",
+    "serve": "rm -rf .parcel-cache docs && parcel src/index.html --dist-dir docs",
     "test": "playwright test",
     "serve:prod": "http-server -p 3000 docs"
   },

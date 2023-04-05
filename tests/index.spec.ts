@@ -6,6 +6,9 @@ import { run } from 'shell-commands';
 test.beforeAll(async () => {
   await run('rm -rf saved');
 });
+test.afterAll(async () => {
+  await run('yarn lint');
+});
 
 const saveFile = (_content: string, ...paths: string[]) => {
   const folderPath = join(__dirname, '..', 'saved', ...paths);
@@ -13,9 +16,11 @@ const saveFile = (_content: string, ...paths: string[]) => {
     mkdirSync(folderPath, { recursive: true });
   }
   let content = _content;
-  if (paths.length > 0) {
-    content = content.replace(/<script src="\/index\./g, '<script src="../index.');
-  }
+  content = content.replace(/<script src="\/index\.[a-z0-9]+?\.js" defer=""><\/script>/, '');
+  content = content.replace(/<html __playwright_target__="call@.+?">/, '<html>');
+  // if (paths.length > 0) {
+  //   content = content.replace(/<script src="\/index\./g, '<script src="../index.');
+  // }
   writeFileSync(join(folderPath, 'index.html'), content);
 };
 
