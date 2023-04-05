@@ -1,0 +1,31 @@
+{
+  "name": "untitled-app",
+  "version": "0.1.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
+    "serve": "parcel src/index.html --dist-dir docs"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "antd": "^5.4.0",
+    "eslint": "^8.37.0",
+    "eslint-config-alloy": "^4.9.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "manate": "^0.3.7",
+    "parcel": "^2.8.3",
+    "prettier": "^2.8.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sort-package-json": "^2.4.1",
+    "ts-node": "^10.9.1",
+    "ttpt": "^0.5.9",
+    "typescript": "^5.0.3",
+    "yarn-upgrade-all": "^0.7.2"
+  }
+}
