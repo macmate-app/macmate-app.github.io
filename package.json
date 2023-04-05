@@ -5,9 +5,11 @@
   "license": "UNLICENSED",
   "scripts": {
     "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
-    "serve": "parcel src/index.html --dist-dir docs"
+    "serve": "parcel src/index.html --dist-dir docs",
+    "test": "playwright test"
   },
   "devDependencies": {
+    "@playwright/test": "^1.32.2",
     "@types/node": "^18.15.11",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
