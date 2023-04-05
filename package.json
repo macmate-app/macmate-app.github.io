@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
     "serve": "parcel src/index.html --dist-dir docs",
-    "test": "playwright test"
+    "test": "playwright test",
+    "serve:prod": "http-server -p 3000 docs"
   },
   "devDependencies": {
     "@playwright/test": "^1.32.2",
@@ -21,6 +22,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "events": "^3.1.0",
     "flat-ui-pro": "https://github.com/designmodo/Flat-UI",
+    "http-server": "^14.1.1",
     "jquery": "2.2.4",
     "manate": "^0.3.7",
     "parcel": "^2.8.3",
