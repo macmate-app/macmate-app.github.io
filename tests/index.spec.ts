@@ -18,9 +18,6 @@ const saveFile = (_content: string, ...paths: string[]) => {
   let content = _content;
   content = content.replace(/<script src="\/index\.[a-z0-9]+?\.js" defer=""><\/script>/, '');
   content = content.replace(/<html __playwright_target__="call@.+?">/, '<html>');
-  // if (paths.length > 0) {
-  //   content = content.replace(/<script src="\/index\./g, '<script src="../index.');
-  // }
   writeFileSync(join(folderPath, 'index.html'), content);
 };
 
