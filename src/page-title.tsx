@@ -2,7 +2,7 @@ import React from 'react';
 import { auto } from 'manate/react';
 
 import { Store } from './store';
-import { apps } from './constants';
+import { apps, pages } from './constants';
 
 const PageTitle = (props: { store: Store }) => {
   const render = () => {
@@ -10,6 +10,10 @@ const PageTitle = (props: { store: Store }) => {
     const app = apps.find((a) => a.path === props.store.path);
     if (app) {
       return <>{`${app.name} - ${siteName}`}</>;
+    }
+    const page = pages.find((p) => p.path === props.store.path);
+    if (page) {
+      return <>{`${page.name} - ${siteName}`}</>;
     }
     return <>{`${siteName} - Maximize your productivity and creativity`}</>;
   };

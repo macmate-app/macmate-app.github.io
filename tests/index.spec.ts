@@ -3,7 +3,7 @@ import { writeFileSync, existsSync, mkdirSync } from 'fs';
 import { join } from 'path';
 import { run } from 'shell-commands';
 
-import { apps } from '../src/constants';
+import { apps, pages } from '../src/constants';
 
 const port = 3000;
 
@@ -51,5 +51,14 @@ test('Apps', async ({ page }) => {
     await page.getByText(app.name).click();
     await expect(page).toHaveTitle(`${app.name} - MacMate.app`);
     saveFile(app.path, await page.content());
+  }
+});
+
+test('Pages', async ({ page }) => {
+  await page.goto(`http://localhost:${port}/`);
+  for (const p of pages) {
+    await page.getByText(p.name).click();
+    await expect(page).toHaveTitle(`${p.name} - MacMate.app`);
+    saveFile(p.path, await page.content());
   }
 });
