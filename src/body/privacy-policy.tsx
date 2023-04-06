@@ -1,5 +1,6 @@
 import React from 'react';
-import MarkdownIt from 'markdown-it';
+
+import { mdi } from '../utils';
 
 const markdown = `
 # Privacy Policy
@@ -35,7 +36,7 @@ We reserve the right to modify this Privacy Policy at any time. If we make any m
 If you have any questions about this Privacy Policy, please [contact us](/contact/).
 `;
 
-const html = new MarkdownIt().render(markdown);
+const html = mdi.render(markdown);
 
 const PrivacyPolicy = () => {
   return <div dangerouslySetInnerHTML={{ __html: html }}></div>;
