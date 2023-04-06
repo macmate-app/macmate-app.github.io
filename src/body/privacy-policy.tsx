@@ -33,7 +33,7 @@ We reserve the right to modify this Privacy Policy at any time. If we make any m
 
 ## Contact Us
 
-If you have any questions about this Privacy Policy, please [contact us](/contact/).
+If you have any questions about this Privacy Policy, please [contact us](/customer-support/).
 `;
 
 const html = mdi.render(markdown);

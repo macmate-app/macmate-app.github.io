@@ -12,7 +12,6 @@ const bodies = {
 
 const Body = (props: { store: Store }) => {
   const render = () => {
-    console.log(props.store.path);
     if (bodies[props.store.path]) {
       return bodies[props.store.path]();
     }
