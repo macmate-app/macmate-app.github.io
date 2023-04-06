@@ -6,6 +6,10 @@ body {
 }
 
 /* footer */
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
   margin-bottom: 8rem; /* stay away from the footer */
 }
