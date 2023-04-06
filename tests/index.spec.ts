@@ -3,12 +3,16 @@ import { writeFileSync, existsSync, mkdirSync } from 'fs';
 import { join } from 'path';
 import { run } from 'shell-commands';
 
+import { apps } from '../src/constants';
+
+const port = 3000;
+
 test.beforeAll(async () => {
   await run(`
     rm -rf docs
     yarn parcel build src/index.html --dist-dir docs
   `);
-  run('timeout 5s yarn http-server -p 1234 docs -c-1'); // auto quit after 5s
+  run(`timeout 5s yarn http-server -p ${port} docs -c-1`); // auto quit after 5s
 });
 test.afterAll(async () => {
   await run(`
@@ -18,8 +22,8 @@ test.afterAll(async () => {
   `);
 });
 
-const saveFile = (_content: string, ...paths: string[]) => {
-  const folderPath = join(__dirname, '..', 'saved', ...paths);
+const saveFile = (path: string, _content: string) => {
+  const folderPath = join(__dirname, '..', 'saved', path);
   if (!existsSync(folderPath)) {
     mkdirSync(folderPath, { recursive: true });
   }
@@ -30,28 +34,22 @@ const saveFile = (_content: string, ...paths: string[]) => {
 };
 
 test('Home Page', async ({ page }) => {
-  await page.goto('http://localhost:1234/');
-  await expect(page).toHaveTitle('MacMate.app');
-  saveFile(await page.content());
+  await page.goto(`http://localhost:${port}/`);
+  await expect(page).toHaveTitle(/MacMate.app - /);
+  saveFile('.', await page.content());
 });
-
-test('Icon Builder Plus', async ({ page }) => {
-  await page.goto('http://localhost:1234/');
-  await page.getByText('Icon Builder Plus').click();
-  await expect(page).toHaveTitle('Icon Builder Plus - MacMate.app');
-  saveFile(await page.content(), 'icon-builder-plus');
-});
-
-test('TypeScript Playground', async ({ page }) => {
-  await page.goto('http://localhost:1234/');
-  await page.getByText('TypeScript Playground').click();
-  await expect(page).toHaveTitle('TypeScript Playground - MacMate.app');
-  saveFile(await page.content(), 'typescript-playground');
-});
-
 test('Page content', async ({ page }) => {
-  await page.goto('http://localhost:1234/');
+  await page.goto(`http://localhost:${port}/`);
   await page.getByText('TypeScript Playground').click();
   const content = await page.content();
   expect(content).toContain('<title>TypeScript Playground - MacMate.app</title>');
+});
+
+test('Apps', async ({ page }) => {
+  await page.goto(`http://localhost:${port}/`);
+  for (const app of apps) {
+    await page.getByText(app.name).click();
+    await expect(page).toHaveTitle(`${app.name} - MacMate.app`);
+    saveFile(app.path, await page.content());
+  }
 });

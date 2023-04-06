@@ -2,18 +2,18 @@ import React from 'react';
 import { auto } from 'manate/react';
 
 import { Store } from './store';
+import { apps } from './constants';
 
 const NavBar = (props: { store: Store }) => {
   const render = () => {
     const { store } = props;
     return (
       <ul className="nav navbar-nav">
-        <li className={store.path === '/icon-builder-plus/' ? 'active' : undefined}>
-          <a href="/icon-builder-plus/">Icon Builder Plus</a>
-        </li>
-        <li className={store.path === '/typescript-playground/' ? 'active' : undefined}>
-          <a href="/typescript-playground/">TypeScript Playground</a>
-        </li>
+        {apps.map((app) => (
+          <li key={app.path} className={store.path === app.path ? 'active' : undefined}>
+            <a href={app.path}>{app.name}</a>
+          </li>
+        ))}
       </ul>
     );
   };
