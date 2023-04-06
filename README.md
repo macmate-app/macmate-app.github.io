@@ -1,9 +1,5 @@
 # New Website
 
-## Todo
-
-- Create a favicon
-
 ## Setup
 
 Install the `timeout` command:
@@ -29,3 +25,10 @@ yarn playwright install
 ```
 yarn test
 ```
+
+## Todo
+
+- add customer support
+- add privacy policy page
+- add a blog section
+- add footer
