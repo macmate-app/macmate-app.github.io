@@ -39,7 +39,7 @@ If you have any questions about this Privacy Policy, please [contact us](/custom
 const html = mdi.render(markdown);
 
 const PrivacyPolicy = () => {
-  return <div dangerouslySetInnerHTML={{ __html: html }}></div>;
+  return <div className="container" dangerouslySetInnerHTML={{ __html: html }}></div>;
 };
 
 export default PrivacyPolicy;

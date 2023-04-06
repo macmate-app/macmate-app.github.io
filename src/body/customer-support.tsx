@@ -19,10 +19,10 @@ const html = mdi.render(markdown);
 
 const CustomerSupport = () => {
   return (
-    <>
+    <div className="container">
       <div dangerouslySetInnerHTML={{ __html: html }}></div>
       <img src={supportImg} />
-    </>
+    </div>
   );
 };
 

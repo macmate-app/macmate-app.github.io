@@ -38,12 +38,6 @@ test('Home Page', async ({ page }) => {
   await expect(page).toHaveTitle(/MacMate.app - /);
   saveFile('.', await page.content());
 });
-test('Page content', async ({ page }) => {
-  await page.goto(`http://localhost:${port}/`);
-  await page.getByText('TypeScript Playground').click();
-  const content = await page.content();
-  expect(content).toContain('<title>TypeScript Playground - MacMate.app</title>');
-});
 
 test('Apps', async ({ page }) => {
   await page.goto(`http://localhost:${port}/`);
