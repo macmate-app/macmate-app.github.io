@@ -4,9 +4,11 @@ import { createRoot } from 'react-dom/client';
 import PageTitle from './page-title';
 import store from './store';
 import NavBar from './nav-bar';
+import Body from './body';
 
 createRoot(document.querySelector('title')!).render(<PageTitle store={store} />);
 createRoot(document.getElementById('navbar-items')!).render(<NavBar store={store} />);
+createRoot(document.getElementById('body-container')!).render(<Body store={store} />);
 
 // Disable internal link redirect
 // Because it is SPA, routes are handled by React + manate.
