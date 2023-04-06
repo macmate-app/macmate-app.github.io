@@ -2,7 +2,7 @@
 @import '../node_modules/flat-ui-pro/dist/css/flat-ui.min.css';
 
 body {
-  margin-top: 4rem; /* stay away from the navbar */
+  margin-top: 6rem; /* stay away from the navbar */
 }
 
 /* footer */
