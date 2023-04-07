@@ -7,7 +7,8 @@
     "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
     "serve": "rm -rf .parcel-cache dist && parcel src/index.html",
     "serve:prod": "http-server -p 3000 docs -c-1",
-    "test": "playwright test"
+    "test": "playwright test",
+    "gather": "ts-node scripts/gather.ts"
   },
   "devDependencies": {
     "@playwright/test": "^1.32.2",
@@ -32,6 +33,7 @@
     "punycode": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "shell-commands": "^0.2.1",
     "sort-package-json": "^2.4.1",
     "ts-node": "^10.9.1",
     "ttpt": "^0.5.9",
