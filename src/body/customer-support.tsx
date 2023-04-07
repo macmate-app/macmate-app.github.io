@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { mdi } from '../utils';
-import supportImg from '../support.jpg';
+import supportImg from '../assets/support.jpg';
 
 const markdown = `
 # Customer Support
