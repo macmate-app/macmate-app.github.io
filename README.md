@@ -40,8 +40,6 @@ Please do not mention specific apps. I want to keep the website generic.
 ## Todo
 
 - add a blog section
-- avoid hard-coding anything
-  - dynamic import
 
 ## Notes
 

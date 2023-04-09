@@ -1,15 +1,7 @@
 import React from 'react';
 
 import { mdi } from '../utils';
-import { screenshots as ibpScreenshots } from '../assets/icon-builder-plus/assets';
-import { screenshots as tpScreenshots } from '../assets/typescript-playground/assets';
-import ibpMarketing from '../assets/icon-builder-plus/marketing';
-import tpMarketing from '../assets/typescript-playground/marketing';
-
-const apps = [
-  { name: ibpMarketing.name, slogan: ibpMarketing.slogan, screenshot: ibpScreenshots[0], path: ibpMarketing.path },
-  { name: tpMarketing.name, slogan: tpMarketing.slogan, screenshot: tpScreenshots[0], path: tpMarketing.path },
-];
+import { apps } from '../assets';
 
 const markdown = `
 Looking to boost your productivity and creativity on your Mac? Look no further than our collection of professionally-built apps designed to help you get the job done quickly and efficiently.
@@ -44,11 +36,11 @@ const Home = () => {
           <div className="carousel-inner" role="listbox">
             {apps.map((app, i) => (
               <div className={i === 0 ? 'item active' : 'item'} key={i}>
-                <a href={app.path}>
-                  <img src={app.screenshot} />
+                <a href={app.marketing.path}>
+                  <img src={app.assets.screenshots[0]} />
                   <div className="carousel-caption">
-                    <h4>{app.name}</h4>
-                    <h6>{app.slogan}</h6>
+                    <h4>{app.marketing.name}</h4>
+                    <h6>{app.marketing.slogan}</h6>
                   </div>
                 </a>
               </div>

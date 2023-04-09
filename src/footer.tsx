@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { pages } from './constants';
+import { pages } from './assets';
 
 const Footer = () => {
   return (

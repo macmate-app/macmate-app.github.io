@@ -4,3 +4,4 @@ docs/
 .DS_Store
 dist/
 src/assets/*/
+src/assets/index.ts

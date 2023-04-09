@@ -2,7 +2,7 @@ import React from 'react';
 import { auto } from 'manate/react';
 
 import { Store } from './store';
-import { apps } from './constants';
+import { apps } from './assets';
 
 const NavBar = (props: { store: Store }) => {
   const render = () => {
@@ -10,9 +10,9 @@ const NavBar = (props: { store: Store }) => {
     return (
       <ul className="nav navbar-nav">
         {apps.map((app) => (
-          <li key={app.path} className={store.path === app.path ? 'active' : undefined}>
-            <a href={app.path} data-testid={app.path}>
-              {app.name}
+          <li key={app.marketing.path} className={store.path === app.marketing.path ? 'active' : undefined}>
+            <a href={app.marketing.path} data-testid={app.marketing.path}>
+              {app.marketing.name}
             </a>
           </li>
         ))}

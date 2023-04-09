@@ -5,17 +5,16 @@ import Home from './home';
 import PrivacyPolicy from './privacy-policy';
 import CustomerSupport from './customer-support';
 import App from './app';
-import ibpMarketing from '../assets/icon-builder-plus/marketing';
-import * as ibpAssets from '../assets/icon-builder-plus/assets';
-import tpMarketing from '../assets/typescript-playground/marketing';
-import * as tpAssets from '../assets/typescript-playground/assets';
+import { apps } from '../assets';
 
 const bodies = {
   '/privacy-policy/': PrivacyPolicy(),
   '/customer-support/': CustomerSupport(),
-  '/icon-builder-plus/': App({ marketing: ibpMarketing, assets: ibpAssets }),
-  '/typescript-playground/': App({ marketing: tpMarketing, assets: tpAssets }),
 };
+
+for (const app of apps) {
+  bodies[app.marketing.path] = App(app);
+}
 
 const Body = (props: { store: Store }) => {
   const render = () => {
