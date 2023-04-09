@@ -40,13 +40,12 @@ Please do not mention specific apps. I want to keep the website generic.
 ## Todo
 
 - add a blog section
-- improve app page
 - avoid hard-coding anything
   - dynamic import
 
 ## Notes
 
-In dev mode, clicking the carousel still redirets.
+In dev mode, clicking the carousel still redirects.
 It is because the click `event.target` is `img` instead of `a`.
-We didn't handle click event for img.
-We can ignore it, it has no impact to production build.
+We didn't handle the click event for an image.
+We can ignore it, it has no impact on the production build.
