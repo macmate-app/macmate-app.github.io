@@ -4,10 +4,10 @@ import { readdirSync, writeFileSync } from 'fs';
 import { apps } from '../src/constants';
 
 const gather = async () => {
-  // todo: enable this for all apps, remove slice
-  for (const a of apps.slice(0, 1)) {
+  for (const a of apps) {
     const app = a.path.substring(1, a.path.length - 1);
     await run(`
+      rm -rf src/assets/${app}
       mkdir -p src/assets/${app}
       cp -r ~/src/ts/${app}/icon.png src/assets/${app}/
       mkdir -p src/assets/${app}/screenshots
@@ -17,7 +17,7 @@ const gather = async () => {
     `);
     const screenshotCounts = readdirSync(`src/assets/${app}/screenshots`).length;
     const screenshotIndexes = Array.from({ length: screenshotCounts }, (_, i) => i);
-    const videoCounts = readdirSync(`src/assets/${app}/videos`).length / 2;
+    const videoCounts = readdirSync(`src/assets/${app}/videos`).length;
     const videoIndexes = Array.from({ length: videoCounts }, (_, i) => i);
     let code = screenshotIndexes.map((i) => `import screenshot${i} from './screenshots/${i}.png';\n`).join('');
     code += videoIndexes.map((i) => `import video${i} from './videos/${i}.mp4';\n`).join('');
