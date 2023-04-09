@@ -11,7 +11,9 @@ const NavBar = (props: { store: Store }) => {
       <ul className="nav navbar-nav">
         {apps.map((app) => (
           <li key={app.path} className={store.path === app.path ? 'active' : undefined}>
-            <a href={app.path}>{app.name}</a>
+            <a href={app.path} data-testid={app.path}>
+              {app.name}
+            </a>
           </li>
         ))}
       </ul>

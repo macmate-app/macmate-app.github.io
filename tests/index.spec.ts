@@ -42,7 +42,7 @@ test('Home Page', async ({ page }) => {
 test('Apps', async ({ page }) => {
   await page.goto(`http://localhost:${port}/`);
   for (const app of apps) {
-    await page.getByText(app.name).click();
+    await page.getByTestId(app.path).click();
     await expect(page).toHaveTitle(`${app.name} - MacMate.app`);
     saveFile(app.path, await page.content());
   }
