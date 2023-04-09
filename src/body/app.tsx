@@ -1,12 +1,15 @@
 import React from 'react';
 
-import { screenshots, videos, icon } from '../assets/typescript-playground/assets';
 import Screenshots from './screenshots';
 import Vidoes from './videos';
-import marketing from '../assets/typescript-playground/marketing';
 import { mdi } from '../utils';
 
-const TypeScriptPlayground = () => {
+const App = (props: {
+  assets: { screenshots: string[]; videos: string[]; icon: string };
+  marketing: { name: string; description: string; features: string };
+}) => {
+  const { screenshots, videos, icon } = props.assets;
+  const { marketing } = props;
   return (
     <div className="container">
       <h1>{marketing.name}</h1>
@@ -21,4 +24,4 @@ const TypeScriptPlayground = () => {
   );
 };
 
-export default TypeScriptPlayground;
+export default App;
