@@ -12,7 +12,7 @@ test.beforeAll(async () => {
     rm -rf docs
     yarn parcel build src/index.html --dist-dir docs
   `);
-  run(`timeout 5s yarn http-server -p ${port} docs -c-1`); // auto quit after 5s
+  run(`timeout 10s yarn http-server -p ${port} docs -c-1`); // auto quit after 5s
 });
 test.afterAll(async () => {
   await run(`

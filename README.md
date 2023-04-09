@@ -39,6 +39,7 @@ Please do not mention specific apps. I want to keep the website generic.
 
 ## Todo
 
-- finish home page
-- finish apps page
 - add a blog section
+- improve app page
+- avoid hard code anything
+  - dynamic import

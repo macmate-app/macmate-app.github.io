@@ -1,8 +1,15 @@
 import React from 'react';
 
 import { mdi } from '../utils';
-import { screenshots as ss0 } from '../assets/icon-builder-plus/assets';
-import { screenshots as ss1 } from '../assets/typescript-playground/assets';
+import { screenshots as ibpScreenshots } from '../assets/icon-builder-plus/assets';
+import { screenshots as tpScreenshots } from '../assets/typescript-playground/assets';
+import ibpMarketing from '../assets/icon-builder-plus/marketing';
+import tpMarketing from '../assets/typescript-playground/marketing';
+
+const apps = [
+  { name: ibpMarketing.name, slogan: ibpMarketing.slogan, screenshot: ibpScreenshots[0], path: ibpMarketing.path },
+  { name: tpMarketing.name, slogan: tpMarketing.slogan, screenshot: tpScreenshots[0], path: tpMarketing.path },
+];
 
 const markdown = `
 Looking to boost your productivity and creativity on your Mac? Look no further than our collection of professionally-built apps designed to help you get the job done quickly and efficiently.
@@ -25,28 +32,27 @@ const Home = () => {
       <div className="container">
         <div id="main-carousel" className="carousel slide" data-ride="carousel">
           <ol className="carousel-indicators">
-            <li data-target="#main-carousel" data-slide-to="0" className="active"></li>
-            <li data-target="#main-carousel" data-slide-to="1"></li>
+            {apps.map((app, i) => (
+              <li
+                data-target="#main-carousel"
+                data-slide-to="0"
+                className={i === 0 ? 'active' : undefined}
+                key={i}
+              ></li>
+            ))}
           </ol>
           <div className="carousel-inner" role="listbox">
-            <div className="item active">
-              <a href="/icon-builder-plus/">
-                <img src={ss0[0]} />
-                <div className="carousel-caption">
-                  <h4>Icon Builder Plus</h4>
-                  <h6>Design stunning icons with ease</h6>
-                </div>
-              </a>
-            </div>
-            <div className="item">
-              <a href="/typescript-playground/">
-                <img src={ss1[0]} />
-                <div className="carousel-caption">
-                  <h4>TypeScript Playground</h4>
-                  <h6>The fastest and easiest way to run TypeScript snippets.</h6>
-                </div>
-              </a>
-            </div>
+            {apps.map((app, i) => (
+              <div className={i === 0 ? 'item active' : 'item'} key={i}>
+                <a href={app.path}>
+                  <img src={app.screenshot} />
+                  <div className="carousel-caption">
+                    <h4>{app.name}</h4>
+                    <h6>{app.slogan}</h6>
+                  </div>
+                </a>
+              </div>
+            ))}
           </div>
           <a className="left carousel-control" href="#main-carousel" role="button" data-slide="prev">
             <span className="glyphicon glyphicon-chevron-left"></span>

@@ -21,7 +21,7 @@ const App = (props: {
       <div dangerouslySetInnerHTML={{ __html: mdi.render(marketing.features) }}></div>
       <h2>Download</h2>
       {marketing.download && (
-        <a href="https://apps.apple.com/us/app/icon-builder-plus/id6447149673?mt=12" target="_blank">
+        <a href={marketing.download} target="_blank">
           <img src={macappstore} />
         </a>
       )}
