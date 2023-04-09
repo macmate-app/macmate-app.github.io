@@ -29,7 +29,7 @@ yarn test
 ## Prompt for chatGPT
 
 I am creating a website to sell Mac apps. All the apps are listed in the Mac App Store.
-My apps are mainly for productivity & creativity. 
+My apps are mainly for productivity & creativity.
 One of the apps is to help users to draft professional-looking icons quickly.
 Another app is to help users to try out TypeScript code snippets conveniently.
 Most of the users are developers or designers. Some of them are for general users.

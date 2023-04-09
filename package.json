@@ -4,11 +4,11 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "gather": "ts-node scripts/gather.ts",
     "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
     "serve": "rm -rf .parcel-cache dist && parcel src/index.html",
     "serve:prod": "http-server -p 3000 docs -c-1",
-    "test": "playwright test",
-    "gather": "ts-node scripts/gather.ts"
+    "test": "playwright test"
   },
   "devDependencies": {
     "@playwright/test": "^1.32.2",
