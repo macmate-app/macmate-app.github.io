@@ -12,7 +12,7 @@ const App = (props: {
   const { screenshots, videos, icon } = props.assets;
   const { marketing } = props;
   return (
-    <div className="container">
+    <div className="markdown-body">
       <h1>{marketing.name}</h1>
       <img src={icon} width="128" style={{ marginRight: '2rem' }} />
       <div dangerouslySetInnerHTML={{ __html: mdi.render(marketing.description) }}></div>
