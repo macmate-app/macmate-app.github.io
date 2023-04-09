@@ -1,3 +1,3 @@
 import MarkdownIt from 'markdown-it';
 
-export const mdi = new MarkdownIt();
+export const mdi = new MarkdownIt({ html: true });

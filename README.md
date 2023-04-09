@@ -14,7 +14,7 @@ Install node.js libraries:
 yarn install
 ```
 
-Install new browsers for playwright:
+Install new browsers for the playwright:
 
 ```
 yarn playwright install
@@ -41,5 +41,12 @@ Please do not mention specific apps. I want to keep the website generic.
 
 - add a blog section
 - improve app page
-- avoid hard code anything
+- avoid hard-coding anything
   - dynamic import
+
+## Notes
+
+In dev mode, clicking the carousel still redirets.
+It is because the click `event.target` is `img` instead of `a`.
+We didn't handle click event for img.
+We can ignore it, it has no impact to production build.
