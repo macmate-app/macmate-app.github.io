@@ -30,6 +30,8 @@ const saveFile = (path: string, _content: string) => {
   let content = _content;
   content = content.replace(/<script type="module" src="\/index\.[a-z0-9]+?\.js"><\/script>/, '');
   content = content.replace(/<html __playwright_target__="call@.+?">/, '<html>');
+  const regex = new RegExp(`http://localhost:${port}/`, 'g');
+  content = content.replace(regex, '/');
   writeFileSync(join(folderPath, 'index.html'), content);
 };
 
