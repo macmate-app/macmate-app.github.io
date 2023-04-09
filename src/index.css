@@ -1,8 +1,23 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../node_modules/flat-ui-pro/dist/css/flat-ui.min.css';
+@import '../node_modules/github-markdown-css/github-markdown-light.css';
 
 body {
   margin-top: 6rem; /* stay away from the navbar */
+}
+
+/* github markdown css */
+.markdown-body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+}
+@media (max-width: 767px) {
+  .markdown-body {
+    padding: 15px;
+  }
 }
 
 /* carousel */
