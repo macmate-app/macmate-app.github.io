@@ -5,6 +5,19 @@ body {
   margin-top: 6rem; /* stay away from the navbar */
 }
 
+/* carousel */
+.carousel-caption {
+  color: orange;
+}
+.carousel-indicators li {
+  background-color: #11a2ea;
+  margin: 0 0.5rem;
+}
+.carousel-indicators .active {
+  background-color: #e54848;
+  margin: 0 0.5rem;
+}
+
 /* footer */
 html {
   position: relative;

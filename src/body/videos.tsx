@@ -8,7 +8,7 @@ const Vidoes = (props: { videos: string[] }) => {
       Your browser does not support HTML5 video.
     </video>
   ));
-  return <>{arr.flatMap((e, i) => (i === arr.length - 1 ? [e] : [e, <hr />]))}</>;
+  return <>{arr.flatMap((e, i) => (i === arr.length - 1 ? [e] : [e, <hr key={`${i}.5`} />]))}</>;
 };
 
 export default Vidoes;
