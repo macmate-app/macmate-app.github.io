@@ -1,7 +1,7 @@
 import { run } from 'shell-commands';
 import { readdirSync, writeFileSync } from 'fs';
 
-const apps = ['icon-builder-plus', 'typescript-playground'];
+const apps = ['icon-builder-plus', 'typescript-playground-pro'];
 
 const gather = async () => {
   for (const app of apps) {
