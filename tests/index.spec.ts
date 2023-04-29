@@ -18,6 +18,7 @@ test.afterAll(async () => {
     cp -r saved/* docs/
     rm -rf saved
     rm -rf test-results
+    cp CNAME docs/
   `);
 });
 

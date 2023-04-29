@@ -1,4 +1,4 @@
-# New Website
+# New Website: https://macmate.app
 
 ## Setup
 
@@ -47,3 +47,5 @@ In dev mode, clicking the carousel still redirects.
 It is because the click `event.target` is `img` instead of `a`.
 We didn't handle the click event for an image.
 We can ignore it, it has no impact on the production build.
+
+in dev mode, App #2's video is from App #1. Not an issue for prod. I think it is caused by cache.
